@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 
-<addon id="repository.erotica" name="Erotica Repository" version="1.0" provider-name="Jax">
+<addon id="repository.erotica" name="Erotica Repository" version="1.1" provider-name="Jax">
 <extension point="xbmc.addon.repository" name="Erotica Repository">
     <dir>
         <info compressed="false">https://github.com/OldManJax/repository.erotica/raw/master/addons.xml</info>
@@ -12,11 +12,6 @@
         <info compressed="false">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/dobbelina/repository.dobbelina/master/</datadir>
-    </dir>
-    <dir>
-        <info compressed="false">https://github.com/Vashiel/repository.adulthideout/raw/master/addons.xml</info>
-        <checksum>https://github.com/Vashiel/repository.adulthideout/raw/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/Vashiel/repository.adulthideout/raw/master/zips</datadir>
     </dir>
     <dir>
 		<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
@@ -32,6 +27,85 @@
         <icon>icon.png</icon>
     </assets>
 </extension>
+</addon>
+
+<addon id="plugin.video.adulthideout" name="AdultHideout" version="1.0.9" provider-name="Vashiel">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.25.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <settingfile>resources/settings.xml</settingfile>
+        <news>
+v. 1.0.9 "Cloud Nine" - 2026-04-20
+- **10 New Sites**: ArchiveBate, CamCaps, Chaturbate, HentaiDude, HentaiOcean, Ikisoda, JAVHDPorn, Perverzija, PMVHaven (by user request), XOpenload.
+- **Improved and Fixed**: AVJoy, WatchPorn.
+- **ArchiveBate**: Right-click filters (Gender, Sort), local thumbnail proxy-cache for CDN bypass, Livewire routing fixes.
+- **AVJoy**: Page/session/stream caching, curl.exe/curl_cffi fetch paths, pre-resolving for visible videos, seek-aware local curl proxy for slow CDN streams.
+- **CamCaps and Chaturbate**: Search, categories, Sort By, pagination, and hardened playback (Lulu HLS proxy, Clicknplay fast-start, Chaturbate room proxy).
+- **Hentai/JAV**: HentaiDude (subtitles, pagination, dashboard fallback), HentaiOcean (API/RSS, direct MP4), Ikisoda (KVS direct MP4), JAVHDPorn (Cloudflare-aware, StreamTape/HugStream resolver).
+- **PMVHaven and Perverzija**: API pagination, search, categories, Sort By; Perverzija adds Cloudflare-hardened listings and XtremeStream HLS.
+- **XOpenload**: Full-length movie support with multi-hoster resolver (MixDrop, StreamTape, DoodStream, Voe).
+- **WatchPorn**: Removed fragile local proxy path, fixed seek stability via direct header-based playback.
+- **Removed**: MaturePorn.Tube (404 only).
+- **Core Engine**: Updated vendored cloudscraper stack, added small resolver ports, kept networking pure-Python for Android/Fire TV.
+- **10th Anniversary Year**: 1.0.9 continues the next expansion wave of AdultHideout's anniversary year.
+        </news>
+        <summary>[COLOR red]XXX[/COLOR] Porn videos</summary>
+        <description>
+Internet [COLOR red]XXX Porn Video[COLOR white] Streams.
+
+[COLOR red][B]WARNING:[/B][COLOR red]Only for adults[/COLOR]    
+
+[COLOR white]AdultHideout does not host third-party videos on its own servers and is not affiliated with the websites supported by the addon.
+Content, streams and metadata are provided by third-party websites.[/COLOR]
+
+[COLOR white]Github:
+https://github.com/Vashiel/repository.adulthideout
+[/COLOR]    
+        </description>
+        <disclaimer>AdultHideout does not host third-party videos on its own servers and is not affiliated with the websites supported by the addon. Content, streams and metadata are provided by third-party websites.</disclaimer>    
+        <platform>all</platform>
+        <license>http://www.gnu.org/licenses/</license>
+        <forum></forum>
+        <website></website>    
+        <email></email>
+        <mainsource>https://github.com/Vashiel/repository.adulthideout</mainsource>    
+        <source></source>         
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.hotstreams" name="Hot Streams" version="1.0" provider-name="Jax">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing"/>
+    <import addon="script.module.unidecode" />
+    <import addon="script.module.inputstreamhelper" />
+    <import addon="script.module.resolveurl"/>
+    <import addon="script.module.microjenscrapers" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Adult Content</summary>
+    <description lang="en">Streaming Porn</description>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+  </assets>
+  </extension>
 </addon>
 
 <addon id="plugin.video.cb20" version="2.2.5" name="CB20" provider-name="aitschti">
